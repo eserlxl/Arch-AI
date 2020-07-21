@@ -31,56 +31,46 @@ Petra based AI bots use the original Petra AI architecture.
 Although Arch AI is a modified version of the Petra AI, now it is based on a different AI architecture due to many modifications and improvements.  
 
 The main differences are:
+
 ### New Attack Plans
-~~~~
 Normal and Huge attacks are not used anymore by Arch AI. New Attack types: Naval, Check and Mate.
-~~~~
+
 ### Naval Attack
-~~~~
 Arch AI can start a Naval attack using the Warships.
-~~~~
 
 ### New Priority List
-~~~~
 Arch AI uses a different priority list that includes infantry, guards and army to improve unit production rate and 
 includes several construction queues that optimizes building construction. 
-~~~~
+
 ### New AI Managers
+
 #### Construct Manager
-~~~~
 The Construct Manager controls all of the construction plans according to the necessity of the buildings.
-~~~~
+
 #### Training Manager
-~~~~
 The Training Manager controls all of the unit productions except ships and traders.
-~~~~
+
 #### Resource Manager
-~~~~
 The Resource Manager controls the field count, corral and workers.
-~~~~
+
 ### Synchronisation Engine
-~~~~
 Arch AI uses AI played turn variable as a reference to run AI managers like Petra does. 
 However, the frequencies of the managers are different, controlled by config.js and are not constant during the game.
-~~~~
+
 ### Disabled Resource Planing
-~~~~
 Arch AI disables Resource Planing in Queue Manager to improve unit production and construction rates.
-~~~~
+
 ### More Effective Barter Trading
-~~~~
 Barter trading policy is totally different from Petra. Contingency trading was cancelled. There's no excpetion for food buy rate.
-~~~~
+
 ### New City Plan
-~~~
 Arch AI uses a new city plan to construct buildings. If Arch AI couldn't find a suitable location for construction, it uses the original city plan as a failover mechansim.
-~~~
+
 ### Adaptive AI Personality Adjustment
-~~~
 Arch AI changes its personality during the game according to the population from defensive to aggressive or inverse.
-~~~
 
 ## Installation
+
 ### For Users
 You can download the release versions from release directory. Extract the relese version and copy the ArchAIPack directory to the mods directory ( ../0ad/data/mods/ ).
 ### For Developers
