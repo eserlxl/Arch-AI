@@ -253,7 +253,7 @@ let ARCH = function (m) {
 
 				let barterRate = getBarterRate(barterPrices, buy, sell);
 
-				if (barterRate > barterRateMin || available[buy] < 500) {
+				if (barterRate > barterRateMin || (barterRateMin > 33 && available[buy] < 500)) {
 					let amount = Math.max(available[sell] - 1000, 100);
 
 					barterers[0].barter(buy, sell, amount);
