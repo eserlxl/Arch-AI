@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 rm -fR ArchAIPack
 mkdir -p ArchAIPack/simulation/ai
+mkdir -p ../release
 cp ../mod.json ArchAIPack
 
 archDevDirectory="../simulation/ai/arch-dev"
