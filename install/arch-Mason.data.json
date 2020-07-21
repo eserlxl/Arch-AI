@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Mason )",
+  "description": "Arch is a modified version of Petra. The Mason Arch believes in masonic brotherhood and helps his allies frequently.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

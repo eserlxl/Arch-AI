@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Admiral )",
+  "description": "Arch is a modified version of Petra. The Admiral Arch rules seas and islands using its naval force.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

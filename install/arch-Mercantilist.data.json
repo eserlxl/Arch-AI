@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Mercantilist )",
+  "description": "Arch is a modified version of Petra. The Mercantilist Arch has high trading capability, powerful diplomacy and navy.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

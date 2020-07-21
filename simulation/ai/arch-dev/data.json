@@ -1,0 +1,7 @@
+{
+  "name": "Arch (Unitary) Development",
+  "description": "Arch is a modified version of Petra. Petra is the default 0 A.D. AI bot. Development version contains many debugging logs and other components for development. Therefore, choosing a development AI results in a slower gaming experince unnecessarily. Unitary Arch Bot does not expand by building multiple bases.\n\nResource stockpiling (either gathering rate or trade gain), unit production and building rates are slower for AI levels easier than the medium AI. In addition, the Sandbox level does not expand nor attack. The AI cheating is disabled, but you can change it using handicap settings for harder AI opponents.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

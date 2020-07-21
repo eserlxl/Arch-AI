@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Theocrat )",
+  "description": "Arch is a modified version of Petra. The Theocrat Arch builds more temples and trains more priests.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Communist )",
+  "description": "Arch is a modified version of Petra. The Communist Arch is not good at trading and diplomacy, but builds more farms to create its own supremacy. The Communist Arch often thinks to build and create an army, however thinks to expand rarely.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

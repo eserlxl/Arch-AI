@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Capitalist )",
+  "description": "Arch is a modified version of Petra. The Capitalist Arch is the default version of Arch Bot that has a balanced political stance.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Patriot )",
+  "description": "Arch is a modified version of Petra. The Patriot Arch defends its motherland and hardly ever tries to expand and attack.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

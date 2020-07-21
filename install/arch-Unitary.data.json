@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Unitary )",
+  "description": "Arch is a modified version of Petra. Unitary Arch Bot does not expand by building multiple bases.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}

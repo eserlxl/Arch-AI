@@ -1,0 +1,7 @@
+{
+  "name": "Arch ( Imperialist )",
+  "description": "Arch is a modified version of Petra. Imperialist Arch builds new bases more frequently to expand quickly.",
+  "moduleName": "ARCH",
+  "constructor": "ArchBot",
+  "useShared": true
+}
