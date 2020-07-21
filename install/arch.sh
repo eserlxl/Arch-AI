@@ -30,11 +30,11 @@ cp -fR petraBased/* ArchAIPack/simulation/ai/
 
 version=$(cat ../mod.json|grep "\"version\":"|awk {'print $2'}|tr -d "\",")
 
-rm -f "../release/ArchAIPack v"$version".zip"
-#pyrogenesis -mod=ArchAIPack -archivebuild=ArchAIPack -archivebuild-output="../release/ArchAIPack v"$version".zip" -archivebuild-compress
+rm -f "../release/ArchAIPack.v"$version".zip"
+#pyrogenesis -mod=ArchAIPack -archivebuild=ArchAIPack -archivebuild-output="../release/ArchAIPack.v"$version".zip" -archivebuild-compress
 cd ArchAIPack
 zip -r -9 ArchAIPack.zip *
 cd -
 rm -fR ArchAIPack/simulation ArchAIPack/mod.json
-tar -czvf "../release/ArchAIPack v"$version".tar.gz" ArchAIPack/
+tar -czvf "../release/ArchAIPack.v"$version".tar.gz" ArchAIPack/
 
