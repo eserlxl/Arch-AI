@@ -445,7 +445,7 @@ let ARCH = function (m) {
 		let targetWorkerCount = gameState.ai.HQ.trainingManager.target["Villager"] + gameState.ai.HQ.trainingManager.target["Infantry"];
 		for (let q in this.queues) {
 			// Never pause major queues!
-			if (q === "emergency" || q === "house" || q === "dock" || q === "market" || q === "civilCentre" || q === "majorTech" || q === "military" || q === "defence" || q === "guards")
+			if (q === "emergency" || q === "house" || q === "dock" || q === "market" || q === "civilCentre" || q === "majorTech" || q === "military" || q === "defence" || q === "guards" || q === "army")
 				continue;
 
 			// Rush protection
