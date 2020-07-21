@@ -313,7 +313,7 @@ let ARCH = function (m) {
 						if (time - ship.getMetadata(PlayerID, "timeGarrison") > 2) {
 							let oldPos = ent.getMetadata(PlayerID, "posGarrison");
 							let newPos = ent.position();
-							if (oldPos[0] === newPos[0] && oldPos[1] === newPos[1])
+							if (oldPos && oldPos[0] === newPos[0] && oldPos[1] === newPos[1])
 								retry = true;
 							ent.setMetadata(PlayerID, "posGarrison", newPos);
 							ent.setMetadata(PlayerID, "timeGarrison", time);
