@@ -1,9 +1,0 @@
-{
-  "name": "ArchAIPack",
-  "version": "0.1.0",
-  "label": "Arch AI Pack",
-  "description": "Arch Bot is a modified version of original Petra Bot AI. This pack includes 9 Arch based AI bots (Admiral, Capitalist, Communist, Imperialist, Mason, Mercantilist, Patriot, Theocrat and Unitary) and 4 Petra based AI bots (Imperialist, Patriot, Single Base and Unitary)",
-  "dependencies": [
-    "0ad>=0.0.23"
-  ]
-}
