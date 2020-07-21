@@ -7,7 +7,7 @@ The original source code of the Petra AI can be downloaded from <https://www.wil
  or can be obtained from the game data folder: simulation/ai/petra/
 
 ## Arch AI Pack
-Arch AI bots are distributed as a pack that consists 9 Arch based and 4 Petra based bots.
+Arch AI bots are distributed as a pack that consists of 9 Arch based and 4 Petra based bots.
 
 ### Arch Based AI Bots
 Arch based AI bots use Arch AI architecture.
@@ -45,10 +45,10 @@ includes several construction queues that optimizes building construction.
 ### New AI Managers
 
 #### Construct Manager
-The Construct Manager controls all of the construction plans according to the necessity of the buildings.
+The Construct Manager controls all the construction plans according to the necessity of the buildings.
 
 #### Training Manager
-The Training Manager controls all of the unit productions except ships and traders.
+The Training Manager controls all the unit productions except ships and traders.
 
 #### Resource Manager
 The Resource Manager controls the field count, corral and workers.
