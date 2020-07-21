@@ -72,7 +72,7 @@ Arch AI changes its personality during the game according to the population from
 ## Installation
 
 ### For Users
-You can download the release versions from release directory. Extract the relese version and copy the ArchAIPack directory to the mods directory ( ../0ad/data/mods/ ).
+You can download the release versions from release directory. Extract the release version and copy the ArchAIPack directory to the mods directory ( ../0ad/data/mods/ ).
 ### For Developers
 Arch install script generates 9 Arch based AI bots (Admiral, Capitalist, Communist, Imperialist, Mason, Mercantilist, Patriot, Theocrat and Unitary) and copies preconfigured 4 Petra based AI bots (Imperialist, Patriot, Single Base and Unitary).
 ~~~~
