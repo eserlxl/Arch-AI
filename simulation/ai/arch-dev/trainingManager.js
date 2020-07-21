@@ -196,7 +196,7 @@ let ARCH = function (m) {
 		this.basicMilitaryBaseCount = gameState.ai.HQ.constructManager.basicMilitaryBaseCount;
 
 		// Leave free population for ships
-		if (gameState.ai.HQ.navalMap && this.population + this.Config.Navy.targetNumWarships >= gameState.getPopulationMax() && gameState.ai.HQ.constructManager.count["Dock"] > 0) {
+		if (gameState.ai.HQ.navalMap && this.population + this.Config.Navy.targetNumWarships - gameState.ai.HQ.navalManager.warShips.length >= gameState.getPopulationMax() && gameState.ai.HQ.constructManager.count["Dock"] > 0) {
 /// DEBUG
 			gameState.ai.logger.push("DEBUG", "TrainingManager", "Training manager was stopped to leave free space for ships.");
 /// DEBUG
