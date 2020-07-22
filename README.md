@@ -38,6 +38,9 @@ Normal and Huge attacks are not used anymore by Arch AI. New Attack types: Naval
 ### Naval Attack
 Arch AI can start a Naval attack using the Warships.
 
+### Base Expansion Mechanism
+Arch AI continues to construct buildings and try to expand during the whole game.
+
 ### New Priority List
 Arch AI uses a different priority list that includes infantry, guards and army to improve unit production rate and 
 includes several construction queues that optimizes building construction. 
