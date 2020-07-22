@@ -64,10 +64,10 @@ However, the frequencies of the managers are different, controlled by config.js 
 Arch AI disables Resource Planing in Queue Manager to improve unit production and construction rates.
 
 ### More Effective Barter Trading
-Barter trading policy is totally different from Petra. Contingency trading was cancelled. There's no excpetion for food buy rate.
+Barter trading policy is totally different from Petra. Contingency trading was cancelled. There's no exception for food buy rate.
 
 ### New City Plan
-Arch AI uses a new city plan to construct buildings. If Arch AI couldn't find a suitable location for construction, it uses the original city plan as a failover mechansim.
+Arch AI uses a new city plan to construct buildings. If Arch AI couldn't find a suitable location for construction, it uses the original city plan as a fail-over mechanism.
 
 ### Adaptive AI Personality Adjustment
 Arch AI changes its personality during the game according to the population from defensive to aggressive or inverse.
