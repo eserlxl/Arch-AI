@@ -1803,8 +1803,18 @@ m.HQ.prototype.checkBaseExpansion = function(gameState, queues)
 
 m.HQ.prototype.buildNewBase = function(gameState, queues, resource)
 {
+/// Patriot
         if (this.numPotentialBases() >= m.maxBaseCount)
                 return false;
+/// Patriot
+/// SingleBased
+        if (this.numPotentialBases() >= m.maxBaseCount)
+                return false;
+/// SingleBased
+/// Unitary
+        if (this.numPotentialBases() >= m.maxBaseCount)
+                return false;
+/// Unitary
 	if (this.numPotentialBases() > 0 && this.currentPhase == 1 && !gameState.isResearching(gameState.getPhaseName(2)))
 		return false;
 	if (gameState.getOwnFoundations().filter(API3.Filters.byClass("CivCentre")).hasEntities() || queues.civilCentre.hasQueuedUnits())

@@ -3,7 +3,15 @@ Engine.IncludeModule("common-api");
 var PETRA = (function() {
 var m = {};
 
+/// Patriot
 m.maxBaseCount = 1;
+/// Patriot
+/// SingleBased
+m.maxBaseCount = 1;
+/// SingleBased
+/// Unitary
+m.maxBaseCount = 1;
+/// Unitary
 
 m.PetraBot = function PetraBot(settings)
 {

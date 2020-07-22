@@ -251,13 +251,87 @@ m.QueueManager.prototype.distributeResources = function(gameState)
 			this.switchResource(gameState, res);
 			continue;
 		}
-		
+/// Imperialist
                 for (let q in this.queues) {
                         let queueCost = this.queues[q].maxAccountWanted(gameState, 0);
                         if (this.queues[q].hasQueuedUnits() && this.accounts[q][res] < queueCost[res] && !this.queues[q].paused) {
                                 this.accounts[q][res] = queueCost[res];
                         }
                 }
+		continue;
+/// Imperialist
+/// Patriot
+                for (let q in this.queues) {
+                        let queueCost = this.queues[q].maxAccountWanted(gameState, 0);
+                        if (this.queues[q].hasQueuedUnits() && this.accounts[q][res] < queueCost[res] && !this.queues[q].paused) {
+                                this.accounts[q][res] = queueCost[res];
+                        }
+                }
+		continue;
+/// Patriot
+		let totalPriority = 0;
+		let tempPrio = {};
+		let maxNeed = {};
+		// Okay so this is where it gets complicated.
+		// If a queue requires "res" for the next elements (in the queue)
+		// And the account is not high enough for it.
+		// Then we add it to the total priority.
+		// To try and be clever, we don't want a long queue to hog all resources. So two things:
+		//	-if a queue has enough of resource X for the 1st element, its priority is decreased (factor 2).
+		//	-queues accounts are capped at "resources for the first + 60% of the next"
+		// This avoids getting a high priority queue with many elements hogging all of one resource
+		// uselessly while it awaits for other resources.
+		for (let j in this.queues)
+		{
+			// returns exactly the correct amount, ie 0 if we're not go.
+			let queueCost = this.queues[j].maxAccountWanted(gameState, 0.6);
+			if (this.queues[j].hasQueuedUnits() && this.accounts[j][res] < queueCost[res] && !this.queues[j].paused)
+			{
+				// adding us to the list of queues that need an update.
+				tempPrio[j] = this.priorities[j];
+				maxNeed[j] = queueCost[res] - this.accounts[j][res];
+				// if we have enough of that resource for our first item in the queue, diminish our priority.
+				if (this.accounts[j][res] >= this.queues[j].getNext().getCost()[res])
+					tempPrio[j] /= 2;
+
+				if (tempPrio[j])
+					totalPriority += tempPrio[j];
+			}
+			else if (this.accounts[j][res] > queueCost[res])
+			{
+				availableRes[res] += this.accounts[j][res] - queueCost[res];
+				this.accounts[j][res] = queueCost[res];
+			}
+		}
+		// Now we allow resources to the accounts. We can at most allow "TempPriority/totalpriority*available"
+		// But we'll sometimes allow less if that would overflow.
+		let available = availableRes[res];
+		let missing = false;
+		for (let j in tempPrio)
+		{
+			// we'll add at much what can be allowed to this queue.
+			let toAdd = Math.floor(availableRes[res] * tempPrio[j]/totalPriority);
+			if (toAdd >= maxNeed[j])
+				toAdd = maxNeed[j];
+			else
+				missing = true;
+			this.accounts[j][res] += toAdd;
+			maxNeed[j] -= toAdd;
+			available -= toAdd;
+		}
+		if (missing && available > 0)   // distribute the rest (due to floor) in any queue
+		{
+			for (let j in tempPrio)
+			{
+				let toAdd = Math.min(maxNeed[j], available);
+				this.accounts[j][res] += toAdd;
+				available -= toAdd;
+				if (available <= 0)
+					break;
+			}
+		}
+		if (available < 0)
+			API3.warn("Petra: problem with remaining " + res + " in queueManager " + available);
 	}
 };
 

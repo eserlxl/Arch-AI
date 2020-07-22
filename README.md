@@ -24,7 +24,7 @@ Arch based AI bots use Arch AI architecture.
 Petra based AI bots use the original Petra AI architecture.
 - Imperialist
 - Patriot
-- Single Base
+- Single Based
 - Unitary
 
 ## Arch AI Architecture
@@ -77,7 +77,7 @@ Arch AI changes its personality during the game according to the population from
 ### For Users
 You can download the release versions from release directory. Extract the release version and copy the ArchAIPack directory to the mods directory ( ../0ad/data/mods/ ).
 ### For Developers
-Arch install script generates 9 Arch based AI bots (Admiral, Capitalist, Communist, Imperialist, Mason, Mercantilist, Patriot, Theocrat and Unitary) and copies preconfigured 4 Petra based AI bots (Imperialist, Patriot, Single Base and Unitary).
+Arch install script generates 9 Arch based AI bots (Admiral, Capitalist, Communist, Imperialist, Mason, Mercantilist, Patriot, Theocrat and Unitary) and 4 Petra based AI bots (Imperialist, Patriot, Single Based and Unitary).
 ~~~~
 cd install
 sh arch.sh

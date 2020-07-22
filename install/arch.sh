@@ -5,10 +5,12 @@ mkdir -p ../release
 cp ../mod.json ArchAIPack
 
 archDevDirectory="../simulation/ai/arch-dev"
+petraDevDirectory="../simulation/ai/petra-dev"
 
-declare -a bots=("Admiral" "Capitalist" "Communist" "Imperialist" "Mercantilist" "Patriot"  "Mason" "Unitary" "Theocrat")
+declare -a archBots=("Admiral" "Capitalist" "Communist" "Imperialist" "Mercantilist" "Patriot" "Mason" "Unitary" "Theocrat")
+declare -a petraBots=("Imperialist" "Patriot" "SingleBased" "Unitary")
 
-for ai in ${bots[@]}
+for ai in ${archBots[@]}
 do
     targetDirectory="ArchAIPack/simulation/ai/arch-"$(echo ${ai}| tr '[:upper:][I]' '[:lower:][i]')
     mkdir -p ${targetDirectory}
@@ -27,7 +29,20 @@ do
     cp -f arch-${ai}.data.json ${targetDirectory}/data.json
 done
 
-cp -fR petraBased/* ArchAIPack/simulation/ai/
+for ai in ${petraBots[@]}
+do
+    targetDirectory="ArchAIPack/simulation/ai/petra-"$(echo ${ai}| tr '[:upper:][I]' '[:lower:][i]')
+    mkdir -p ${targetDirectory}
+
+    petraSourceFiles=$(ls -1 ${petraDevDirectory});
+
+    for file in ${petraSourceFiles}
+    do
+    cat ${petraDevDirectory}/${file}|awk -v target=${ai} 'BEGIN {c=1;}{if($2!=target){if($1=="///")c*=-1;else if(c==1)print $0;}}' > ${targetDirectory}/${file}
+    done
+
+    cp -f petra-${ai}.data.json ${targetDirectory}/data.json
+done
 
 version=$(cat ../mod.json|grep "\"version\":"|awk {'print $2'}|tr -d "\",")
 

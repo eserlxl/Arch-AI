@@ -1214,7 +1214,6 @@ m.AttackPlan.prototype.setRallyPoint = function(gameState)
  */
 m.AttackPlan.prototype.StartAttack = function(gameState)
 {
-        
 	if (this.Config.debug > 1)
 		API3.warn("start attack " + this.name + " with type " + this.type);
 
@@ -1227,10 +1226,21 @@ m.AttackPlan.prototype.StartAttack = function(gameState)
 	gameState.ai.queueManager.removeQueue("plan_" + this.name);
 	gameState.ai.queueManager.removeQueue("plan_" + this.name + "_champ");
 	gameState.ai.queueManager.removeQueue("plan_" + this.name + "_siege");
-        
+/// Imperialist
         // Wait to attack!
         if( gameState.getPopulation() < 0.85*gameState.getPopulationMax() )
             return false;
+/// Imperialist
+/// Patriot
+        // Wait to attack!
+        if( gameState.getPopulation() < 0.85*gameState.getPopulationMax() )
+            return false;
+/// Patriot
+/// Unitary
+        // Wait to attack!
+        if( gameState.getPopulation() < 0.85*gameState.getPopulationMax() )
+            return false;
+/// Unitary
 
 	for (let ent of this.unitCollection.values())
 	{
